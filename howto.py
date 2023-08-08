@@ -16,16 +16,16 @@ arg = ' '.join(sys.argv[2:])
 print(f"arg: {arg}")
 
 r = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo",
-  #model="gpt-4",
-  messages=[
+    model="gpt-3.5-turbo",
+    # model="gpt-4",
+    messages=[
         {"role": "system", "content": "You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible."},
-        {"role": "user", "content": f"Answer with only the actual command without any intro or explanation. What is the {system} command line command to {arg}"}
+        {"role": "user", "content": f"Answer with only the actual code without any intro or explanation. What is the {system} code to {arg}, create all necessary files with as implemataion as possible?"},
     ]
 )
 
 text = r["choices"][0]["message"]["content"]
 if text.startswith('`') and text.endswith('`'):
-  text = text[1:-1]
+    text = text[1:-1]
 
 print(text)
