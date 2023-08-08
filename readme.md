@@ -11,19 +11,6 @@ Before using this script, you need to have the following:
 - **Python**: Make sure you have Python installed on your system.
 - **OpenAI API Key**: You need an OpenAI API key to authenticate your requests to the GPT-3.5 Turbo model.
 
-## Installation
-
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
-
-2. Install the required Python packages:
-
-   ```bash
-   pip install openai
-
 ## Usage
 
 1. Export your OpenAI API key as an environment variable:
