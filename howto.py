@@ -10,10 +10,20 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 openai.api_key = OPENAI_API_KEY
 
+# exit if no key
+if not OPENAI_API_KEY:
+    print("Please set OPENAI_API_KEY environment variable.")
+    sys.exit(1)
+
+# exit if no args
+if len(sys.argv) < 3:
+    print("Usage: python howto.py <system> <arg>")
+    sys.exit(1)
+
 system = sys.argv[1]
 arg = ' '.join(sys.argv[2:])
 
-print(f"arg: {arg}")
+print(f"system: {system}, message: {arg}")
 
 r = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
