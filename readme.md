@@ -42,14 +42,14 @@ Before using this script, you need to have the following:
 
 For instance, if you want to get a description of the `ls` command, you can run:
   ```console
-  python howto.py ls
+  python howto.py powershell list files in current directory
   ```
 
 The script will interact with the GPT-3.5 Turbo model to generate a description of the `ls` command and its usage.
 
 ## Output
 
-The script will print the generated description of the command obtained from the GPT-3.5 Turbo model.
+The script will print the generated command.
 
 ## Notes
 
