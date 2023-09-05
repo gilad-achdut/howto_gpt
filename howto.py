@@ -4,18 +4,13 @@ import sys
 import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
-# get openai key from environment variable
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-
 openai.api_key = OPENAI_API_KEY
 
-# exit if no key
 if not OPENAI_API_KEY:
     print("Please set OPENAI_API_KEY environment variable.")
     sys.exit(1)
 
-# exit if no args
 if len(sys.argv) < 3:
     print("Usage: python howto.py <system> <arg>")
     sys.exit(1)
