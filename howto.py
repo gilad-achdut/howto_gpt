@@ -25,7 +25,7 @@ r = openai.ChatCompletion.create(
     # model="gpt-4",
     messages=[
         {"role": "system", "content": "You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible."},
-        {"role": "user", "content": f"Answer with only the actual code without any intro or explanation, If possible give a single command. What is the {system} command to {arg}, describe all necessary files with as much implemataion as possible"},
+        {"role": "user", "content": f"Answer with only the actual code without any intro or explanation, If possible give a single command. What is the {system} command to {arg}, describe all necessary files with as much implementation as possible"},
     ]
 )
 
